@@ -29,7 +29,7 @@
         }
     ],
     "require": {
-        "php": ">=8.1",
+        "php": ">=7.4",
         "ext-json": "*",
         "ext-mbstring": "*",
         "jane-php/open-api-runtime": "^7.4",
