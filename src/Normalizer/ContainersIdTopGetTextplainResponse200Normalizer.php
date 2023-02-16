@@ -28,7 +28,7 @@ class ContainersIdTopGetTextplainResponse200Normalizer implements DenormalizerIn
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainersIdTopGetTextplainResponse200' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainersIdTopGetTextplainResponse200' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class CreateImageInfoNormalizer implements DenormalizerInterface, NormalizerInte
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\CreateImageInfo' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\CreateImageInfo' === \get_class($data);
     }
 
     /**

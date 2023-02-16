@@ -28,7 +28,7 @@ class ContainerSummaryItemHostConfigNormalizer implements DenormalizerInterface,
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainerSummaryItemHostConfig' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainerSummaryItemHostConfig' === \get_class($data);
     }
 
     /**

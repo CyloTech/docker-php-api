@@ -28,7 +28,7 @@ class TaskSpecPlacementPreferencesItemNormalizer implements DenormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecPlacementPreferencesItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecPlacementPreferencesItem' === \get_class($data);
     }
 
     /**

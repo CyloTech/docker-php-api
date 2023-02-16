@@ -28,7 +28,7 @@ class MountBindOptionsNormalizer implements DenormalizerInterface, NormalizerInt
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\MountBindOptions' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\MountBindOptions' === \get_class($data);
     }
 
     /**

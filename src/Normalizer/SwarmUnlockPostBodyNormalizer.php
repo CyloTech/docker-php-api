@@ -28,7 +28,7 @@ class SwarmUnlockPostBodyNormalizer implements DenormalizerInterface, Normalizer
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SwarmUnlockPostBody' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SwarmUnlockPostBody' === \get_class($data);
     }
 
     /**

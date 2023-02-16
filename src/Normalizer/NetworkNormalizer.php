@@ -28,7 +28,7 @@ class NetworkNormalizer implements DenormalizerInterface, NormalizerInterface, D
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Network' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Network' === \get_class($data);
     }
 
     /**

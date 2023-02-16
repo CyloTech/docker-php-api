@@ -28,7 +28,7 @@ class NetworkingConfigNormalizer implements DenormalizerInterface, NormalizerInt
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\NetworkingConfig' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\NetworkingConfig' === \get_class($data);
     }
 
     /**

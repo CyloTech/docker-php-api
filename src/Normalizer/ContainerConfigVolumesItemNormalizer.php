@@ -28,7 +28,7 @@ class ContainerConfigVolumesItemNormalizer implements DenormalizerInterface, Nor
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainerConfigVolumesItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainerConfigVolumesItem' === \get_class($data);
     }
 
     /**

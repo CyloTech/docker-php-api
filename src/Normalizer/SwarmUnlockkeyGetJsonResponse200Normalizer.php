@@ -28,7 +28,7 @@ class SwarmUnlockkeyGetJsonResponse200Normalizer implements DenormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SwarmUnlockkeyGetJsonResponse200' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SwarmUnlockkeyGetJsonResponse200' === \get_class($data);
     }
 
     /**

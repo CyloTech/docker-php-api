@@ -28,7 +28,7 @@ class EndpointIPAMConfigNormalizer implements DenormalizerInterface, NormalizerI
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\EndpointIPAMConfig' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\EndpointIPAMConfig' === \get_class($data);
     }
 
     /**

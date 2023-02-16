@@ -28,7 +28,7 @@ class ConfigNormalizer implements DenormalizerInterface, NormalizerInterface, De
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Config' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Config' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ErrorResponse' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ErrorResponse' === \get_class($data);
     }
 
     /**

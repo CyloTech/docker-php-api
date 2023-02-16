@@ -28,7 +28,7 @@ class TaskSpecLogDriverNormalizer implements DenormalizerInterface, NormalizerIn
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecLogDriver' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecLogDriver' === \get_class($data);
     }
 
     /**

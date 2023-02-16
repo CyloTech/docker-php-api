@@ -28,7 +28,7 @@ class ContainerSummaryItemNormalizer implements DenormalizerInterface, Normalize
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainerSummaryItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainerSummaryItem' === \get_class($data);
     }
 
     /**

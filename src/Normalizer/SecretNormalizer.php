@@ -28,7 +28,7 @@ class SecretNormalizer implements DenormalizerInterface, NormalizerInterface, De
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Secret' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Secret' === \get_class($data);
     }
 
     /**

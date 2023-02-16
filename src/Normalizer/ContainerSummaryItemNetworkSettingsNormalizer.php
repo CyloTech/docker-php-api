@@ -28,7 +28,7 @@ class ContainerSummaryItemNetworkSettingsNormalizer implements DenormalizerInter
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainerSummaryItemNetworkSettings' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainerSummaryItemNetworkSettings' === \get_class($data);
     }
 
     /**

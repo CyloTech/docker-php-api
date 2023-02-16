@@ -28,7 +28,7 @@ class ImageSummaryNormalizer implements DenormalizerInterface, NormalizerInterfa
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ImageSummary' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ImageSummary' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class TaskSpecPluginSpecNormalizer implements DenormalizerInterface, NormalizerI
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecPluginSpec' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecPluginSpec' === \get_class($data);
     }
 
     /**

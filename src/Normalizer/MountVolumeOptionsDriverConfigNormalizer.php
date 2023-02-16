@@ -28,7 +28,7 @@ class MountVolumeOptionsDriverConfigNormalizer implements DenormalizerInterface,
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\MountVolumeOptionsDriverConfig' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\MountVolumeOptionsDriverConfig' === \get_class($data);
     }
 
     /**

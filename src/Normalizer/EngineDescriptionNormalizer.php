@@ -28,7 +28,7 @@ class EngineDescriptionNormalizer implements DenormalizerInterface, NormalizerIn
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\EngineDescription' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\EngineDescription' === \get_class($data);
     }
 
     /**

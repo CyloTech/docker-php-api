@@ -28,7 +28,7 @@ class VolumeNormalizer implements DenormalizerInterface, NormalizerInterface, De
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Volume' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Volume' === \get_class($data);
     }
 
     /**

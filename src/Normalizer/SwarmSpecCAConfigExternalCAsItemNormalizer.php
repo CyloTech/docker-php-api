@@ -28,7 +28,7 @@ class SwarmSpecCAConfigExternalCAsItemNormalizer implements DenormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecCAConfigExternalCAsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecCAConfigExternalCAsItem' === \get_class($data);
     }
 
     /**

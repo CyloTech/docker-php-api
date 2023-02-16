@@ -28,7 +28,7 @@ class ServiceSpecModeGlobalJobNormalizer implements DenormalizerInterface, Norma
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ServiceSpecModeGlobalJob' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ServiceSpecModeGlobalJob' === \get_class($data);
     }
 
     /**

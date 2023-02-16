@@ -28,7 +28,7 @@ class SystemDfGetJsonResponse200Normalizer implements DenormalizerInterface, Nor
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SystemDfGetJsonResponse200' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SystemDfGetJsonResponse200' === \get_class($data);
     }
 
     /**

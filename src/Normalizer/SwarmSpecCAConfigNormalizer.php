@@ -28,7 +28,7 @@ class SwarmSpecCAConfigNormalizer implements DenormalizerInterface, NormalizerIn
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecCAConfig' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecCAConfig' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class TaskSpecContainerSpecSecretsItemNormalizer implements DenormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecContainerSpecSecretsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecContainerSpecSecretsItem' === \get_class($data);
     }
 
     /**

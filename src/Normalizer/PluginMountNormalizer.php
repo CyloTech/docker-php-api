@@ -28,7 +28,7 @@ class PluginMountNormalizer implements DenormalizerInterface, NormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\PluginMount' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\PluginMount' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class HealthcheckResultNormalizer implements DenormalizerInterface, NormalizerIn
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\HealthcheckResult' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\HealthcheckResult' === \get_class($data);
     }
 
     /**

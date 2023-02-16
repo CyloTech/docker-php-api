@@ -28,7 +28,7 @@ class ContainerConfigExposedPortsItemNormalizer implements DenormalizerInterface
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainerConfigExposedPortsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainerConfigExposedPortsItem' === \get_class($data);
     }
 
     /**

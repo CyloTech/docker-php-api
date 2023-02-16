@@ -28,7 +28,7 @@ class DriverNormalizer implements DenormalizerInterface, NormalizerInterface, De
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Driver' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Driver' === \get_class($data);
     }
 
     /**

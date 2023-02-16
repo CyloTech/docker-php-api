@@ -28,7 +28,7 @@ class ResourcesBlkioWeightDeviceItemNormalizer implements DenormalizerInterface,
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ResourcesBlkioWeightDeviceItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ResourcesBlkioWeightDeviceItem' === \get_class($data);
     }
 
     /**

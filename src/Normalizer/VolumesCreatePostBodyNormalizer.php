@@ -28,7 +28,7 @@ class VolumesCreatePostBodyNormalizer implements DenormalizerInterface, Normaliz
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\VolumesCreatePostBody' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\VolumesCreatePostBody' === \get_class($data);
     }
 
     /**

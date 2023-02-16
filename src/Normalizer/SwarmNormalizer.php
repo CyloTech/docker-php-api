@@ -28,7 +28,7 @@ class SwarmNormalizer implements DenormalizerInterface, NormalizerInterface, Den
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Swarm' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Swarm' === \get_class($data);
     }
 
     /**

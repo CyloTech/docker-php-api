@@ -28,7 +28,7 @@ class ManagerStatusNormalizer implements DenormalizerInterface, NormalizerInterf
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ManagerStatus' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ManagerStatus' === \get_class($data);
     }
 
     /**

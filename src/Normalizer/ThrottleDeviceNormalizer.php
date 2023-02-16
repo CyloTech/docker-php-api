@@ -28,7 +28,7 @@ class ThrottleDeviceNormalizer implements DenormalizerInterface, NormalizerInter
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ThrottleDevice' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ThrottleDevice' === \get_class($data);
     }
 
     /**

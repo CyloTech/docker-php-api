@@ -28,7 +28,7 @@ class LimitNormalizer implements DenormalizerInterface, NormalizerInterface, Den
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Limit' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Limit' === \get_class($data);
     }
 
     /**

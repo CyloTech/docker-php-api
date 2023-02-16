@@ -28,7 +28,7 @@ class AuthPostResponse200Normalizer implements DenormalizerInterface, Normalizer
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\AuthPostResponse200' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\AuthPostResponse200' === \get_class($data);
     }
 
     /**

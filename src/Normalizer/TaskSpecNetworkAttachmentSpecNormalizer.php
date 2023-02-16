@@ -28,7 +28,7 @@ class TaskSpecNetworkAttachmentSpecNormalizer implements DenormalizerInterface, 
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecNetworkAttachmentSpec' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecNetworkAttachmentSpec' === \get_class($data);
     }
 
     /**

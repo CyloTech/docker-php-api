@@ -28,7 +28,7 @@ class TaskNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Task' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Task' === \get_class($data);
     }
 
     /**

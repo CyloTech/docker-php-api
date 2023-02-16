@@ -28,7 +28,7 @@ class SwarmSpecTaskDefaultsNormalizer implements DenormalizerInterface, Normaliz
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecTaskDefaults' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecTaskDefaults' === \get_class($data);
     }
 
     /**

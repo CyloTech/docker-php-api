@@ -28,7 +28,7 @@ class ServiceEndpointVirtualIPsItemNormalizer implements DenormalizerInterface, 
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ServiceEndpointVirtualIPsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ServiceEndpointVirtualIPsItem' === \get_class($data);
     }
 
     /**

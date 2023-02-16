@@ -28,7 +28,7 @@ class ContainersCreatePostBodyNormalizer implements DenormalizerInterface, Norma
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainersCreatePostBody' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainersCreatePostBody' === \get_class($data);
     }
 
     /**

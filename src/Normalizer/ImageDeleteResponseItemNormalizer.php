@@ -28,7 +28,7 @@ class ImageDeleteResponseItemNormalizer implements DenormalizerInterface, Normal
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ImageDeleteResponseItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ImageDeleteResponseItem' === \get_class($data);
     }
 
     /**

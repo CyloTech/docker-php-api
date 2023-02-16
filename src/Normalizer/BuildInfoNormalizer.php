@@ -28,7 +28,7 @@ class BuildInfoNormalizer implements DenormalizerInterface, NormalizerInterface,
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\BuildInfo' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\BuildInfo' === \get_class($data);
     }
 
     /**

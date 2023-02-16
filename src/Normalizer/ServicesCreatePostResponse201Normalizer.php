@@ -28,7 +28,7 @@ class ServicesCreatePostResponse201Normalizer implements DenormalizerInterface, 
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ServicesCreatePostResponse201' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ServicesCreatePostResponse201' === \get_class($data);
     }
 
     /**

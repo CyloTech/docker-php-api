@@ -28,7 +28,7 @@ class ContainerStateNormalizer implements DenormalizerInterface, NormalizerInter
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainerState' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainerState' === \get_class($data);
     }
 
     /**

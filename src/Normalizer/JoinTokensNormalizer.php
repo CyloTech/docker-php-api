@@ -28,7 +28,7 @@ class JoinTokensNormalizer implements DenormalizerInterface, NormalizerInterface
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\JoinTokens' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\JoinTokens' === \get_class($data);
     }
 
     /**

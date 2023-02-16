@@ -28,7 +28,7 @@ class MountPointNormalizer implements DenormalizerInterface, NormalizerInterface
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\MountPoint' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\MountPoint' === \get_class($data);
     }
 
     /**

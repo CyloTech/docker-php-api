@@ -28,7 +28,7 @@ class SystemInfoDefaultAddressPoolsItemNormalizer implements DenormalizerInterfa
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SystemInfoDefaultAddressPoolsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SystemInfoDefaultAddressPoolsItem' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class ResourcesNormalizer implements DenormalizerInterface, NormalizerInterface,
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Resources' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Resources' === \get_class($data);
     }
 
     /**

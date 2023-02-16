@@ -28,7 +28,7 @@ class TaskStatusNormalizer implements DenormalizerInterface, NormalizerInterface
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskStatus' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskStatus' === \get_class($data);
     }
 
     /**

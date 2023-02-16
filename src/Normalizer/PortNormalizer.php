@@ -28,7 +28,7 @@ class PortNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Port' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Port' === \get_class($data);
     }
 
     /**

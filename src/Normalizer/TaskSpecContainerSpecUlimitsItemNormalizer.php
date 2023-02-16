@@ -28,7 +28,7 @@ class TaskSpecContainerSpecUlimitsItemNormalizer implements DenormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecContainerSpecUlimitsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecContainerSpecUlimitsItem' === \get_class($data);
     }
 
     /**

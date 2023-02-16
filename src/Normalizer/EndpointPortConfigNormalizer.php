@@ -28,7 +28,7 @@ class EndpointPortConfigNormalizer implements DenormalizerInterface, NormalizerI
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\EndpointPortConfig' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\EndpointPortConfig' === \get_class($data);
     }
 
     /**

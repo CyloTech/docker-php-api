@@ -28,7 +28,7 @@ class SwarmJoinPostBodyNormalizer implements DenormalizerInterface, NormalizerIn
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SwarmJoinPostBody' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SwarmJoinPostBody' === \get_class($data);
     }
 
     /**

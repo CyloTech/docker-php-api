@@ -28,7 +28,7 @@ class EventsGetResponse200ActorNormalizer implements DenormalizerInterface, Norm
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\EventsGetResponse200Actor' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\EventsGetResponse200Actor' === \get_class($data);
     }
 
     /**

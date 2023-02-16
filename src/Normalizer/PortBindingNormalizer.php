@@ -28,7 +28,7 @@ class PortBindingNormalizer implements DenormalizerInterface, NormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\PortBinding' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\PortBinding' === \get_class($data);
     }
 
     /**

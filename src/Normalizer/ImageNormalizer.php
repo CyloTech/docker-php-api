@@ -28,7 +28,7 @@ class ImageNormalizer implements DenormalizerInterface, NormalizerInterface, Den
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Image' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Image' === \get_class($data);
     }
 
     /**

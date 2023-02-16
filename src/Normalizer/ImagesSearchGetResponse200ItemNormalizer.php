@@ -28,7 +28,7 @@ class ImagesSearchGetResponse200ItemNormalizer implements DenormalizerInterface,
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ImagesSearchGetResponse200Item' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ImagesSearchGetResponse200Item' === \get_class($data);
     }
 
     /**

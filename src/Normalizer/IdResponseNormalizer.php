@@ -28,7 +28,7 @@ class IdResponseNormalizer implements DenormalizerInterface, NormalizerInterface
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\IdResponse' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\IdResponse' === \get_class($data);
     }
 
     /**

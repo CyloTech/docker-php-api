@@ -28,7 +28,7 @@ class IndexInfoNormalizer implements DenormalizerInterface, NormalizerInterface,
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\IndexInfo' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\IndexInfo' === \get_class($data);
     }
 
     /**

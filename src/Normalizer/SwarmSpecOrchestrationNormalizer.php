@@ -28,7 +28,7 @@ class SwarmSpecOrchestrationNormalizer implements DenormalizerInterface, Normali
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecOrchestration' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecOrchestration' === \get_class($data);
     }
 
     /**

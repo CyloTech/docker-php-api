@@ -28,7 +28,7 @@ class MountNormalizer implements DenormalizerInterface, NormalizerInterface, Den
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Mount' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Mount' === \get_class($data);
     }
 
     /**

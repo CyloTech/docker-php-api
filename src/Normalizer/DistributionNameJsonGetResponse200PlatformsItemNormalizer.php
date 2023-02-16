@@ -28,7 +28,7 @@ class DistributionNameJsonGetResponse200PlatformsItemNormalizer implements Denor
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\DistributionNameJsonGetResponse200PlatformsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\DistributionNameJsonGetResponse200PlatformsItem' === \get_class($data);
     }
 
     /**

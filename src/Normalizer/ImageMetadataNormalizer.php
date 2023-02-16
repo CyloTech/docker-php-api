@@ -28,7 +28,7 @@ class ImageMetadataNormalizer implements DenormalizerInterface, NormalizerInterf
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ImageMetadata' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ImageMetadata' === \get_class($data);
     }
 
     /**

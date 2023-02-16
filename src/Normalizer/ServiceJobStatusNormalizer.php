@@ -28,7 +28,7 @@ class ServiceJobStatusNormalizer implements DenormalizerInterface, NormalizerInt
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ServiceJobStatus' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ServiceJobStatus' === \get_class($data);
     }
 
     /**

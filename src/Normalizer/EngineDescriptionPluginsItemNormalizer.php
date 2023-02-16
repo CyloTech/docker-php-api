@@ -28,7 +28,7 @@ class EngineDescriptionPluginsItemNormalizer implements DenormalizerInterface, N
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\EngineDescriptionPluginsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\EngineDescriptionPluginsItem' === \get_class($data);
     }
 
     /**

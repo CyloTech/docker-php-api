@@ -28,7 +28,7 @@ class EndpointSettingsNormalizer implements DenormalizerInterface, NormalizerInt
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\EndpointSettings' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\EndpointSettings' === \get_class($data);
     }
 
     /**

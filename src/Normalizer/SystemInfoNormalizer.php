@@ -28,7 +28,7 @@ class SystemInfoNormalizer implements DenormalizerInterface, NormalizerInterface
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SystemInfo' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SystemInfo' === \get_class($data);
     }
 
     /**

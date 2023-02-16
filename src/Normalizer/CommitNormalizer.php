@@ -28,7 +28,7 @@ class CommitNormalizer implements DenormalizerInterface, NormalizerInterface, De
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Commit' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Commit' === \get_class($data);
     }
 
     /**

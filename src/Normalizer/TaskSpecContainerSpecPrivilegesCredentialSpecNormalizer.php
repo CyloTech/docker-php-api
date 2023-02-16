@@ -28,7 +28,7 @@ class TaskSpecContainerSpecPrivilegesCredentialSpecNormalizer implements Denorma
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecContainerSpecPrivilegesCredentialSpec' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecContainerSpecPrivilegesCredentialSpec' === \get_class($data);
     }
 
     /**

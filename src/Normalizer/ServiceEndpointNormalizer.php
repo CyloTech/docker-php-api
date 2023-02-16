@@ -28,7 +28,7 @@ class ServiceEndpointNormalizer implements DenormalizerInterface, NormalizerInte
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ServiceEndpoint' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ServiceEndpoint' === \get_class($data);
     }
 
     /**

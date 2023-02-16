@@ -28,7 +28,7 @@ class GenericResourcesItemNamedResourceSpecNormalizer implements DenormalizerInt
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\GenericResourcesItemNamedResourceSpec' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\GenericResourcesItemNamedResourceSpec' === \get_class($data);
     }
 
     /**

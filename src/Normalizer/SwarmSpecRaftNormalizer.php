@@ -28,7 +28,7 @@ class SwarmSpecRaftNormalizer implements DenormalizerInterface, NormalizerInterf
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecRaft' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SwarmSpecRaft' === \get_class($data);
     }
 
     /**

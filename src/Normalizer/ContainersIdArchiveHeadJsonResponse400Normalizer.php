@@ -28,7 +28,7 @@ class ContainersIdArchiveHeadJsonResponse400Normalizer implements DenormalizerIn
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainersIdArchiveHeadJsonResponse400' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainersIdArchiveHeadJsonResponse400' === \get_class($data);
     }
 
     /**

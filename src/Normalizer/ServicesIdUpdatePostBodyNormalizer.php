@@ -28,7 +28,7 @@ class ServicesIdUpdatePostBodyNormalizer implements DenormalizerInterface, Norma
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ServicesIdUpdatePostBody' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ServicesIdUpdatePostBody' === \get_class($data);
     }
 
     /**

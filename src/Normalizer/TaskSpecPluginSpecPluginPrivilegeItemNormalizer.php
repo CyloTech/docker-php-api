@@ -28,7 +28,7 @@ class TaskSpecPluginSpecPluginPrivilegeItemNormalizer implements DenormalizerInt
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecPluginSpecPluginPrivilegeItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecPluginSpecPluginPrivilegeItem' === \get_class($data);
     }
 
     /**

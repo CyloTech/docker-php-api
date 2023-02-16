@@ -28,7 +28,7 @@ class PluginsPrivilegesGetTextplainResponse200ItemNormalizer implements Denormal
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\PluginsPrivilegesGetTextplainResponse200Item' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\PluginsPrivilegesGetTextplainResponse200Item' === \get_class($data);
     }
 
     /**

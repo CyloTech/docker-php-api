@@ -28,7 +28,7 @@ class ImageRootFSNormalizer implements DenormalizerInterface, NormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ImageRootFS' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ImageRootFS' === \get_class($data);
     }
 
     /**

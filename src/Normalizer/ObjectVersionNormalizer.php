@@ -28,7 +28,7 @@ class ObjectVersionNormalizer implements DenormalizerInterface, NormalizerInterf
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ObjectVersion' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ObjectVersion' === \get_class($data);
     }
 
     /**

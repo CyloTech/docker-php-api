@@ -28,7 +28,7 @@ class PluginConfigInterfaceNormalizer implements DenormalizerInterface, Normaliz
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\PluginConfigInterface' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\PluginConfigInterface' === \get_class($data);
     }
 
     /**

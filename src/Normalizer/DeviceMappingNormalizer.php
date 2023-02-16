@@ -28,7 +28,7 @@ class DeviceMappingNormalizer implements DenormalizerInterface, NormalizerInterf
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\DeviceMapping' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\DeviceMapping' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class HealthNormalizer implements DenormalizerInterface, NormalizerInterface, De
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Health' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Health' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class ContainersIdWaitPostResponse200Normalizer implements DenormalizerInterface
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ContainersIdWaitPostResponse200' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ContainersIdWaitPostResponse200' === \get_class($data);
     }
 
     /**

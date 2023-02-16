@@ -28,7 +28,7 @@ class NetworkAttachmentConfigNormalizer implements DenormalizerInterface, Normal
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\NetworkAttachmentConfig' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\NetworkAttachmentConfig' === \get_class($data);
     }
 
     /**

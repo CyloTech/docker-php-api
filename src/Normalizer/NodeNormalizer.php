@@ -28,7 +28,7 @@ class NodeNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Node' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Node' === \get_class($data);
     }
 
     /**

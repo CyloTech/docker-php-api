@@ -28,7 +28,7 @@ class HostConfigNormalizer implements DenormalizerInterface, NormalizerInterface
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\HostConfig' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\HostConfig' === \get_class($data);
     }
 
     /**

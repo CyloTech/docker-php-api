@@ -28,7 +28,7 @@ class DistributionNameJsonGetResponse200Normalizer implements DenormalizerInterf
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\DistributionNameJsonGetResponse200' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\DistributionNameJsonGetResponse200' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class TaskStatusContainerStatusNormalizer implements DenormalizerInterface, Norm
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskStatusContainerStatus' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskStatusContainerStatus' === \get_class($data);
     }
 
     /**

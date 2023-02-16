@@ -28,7 +28,7 @@ class TaskSpecNormalizer implements DenormalizerInterface, NormalizerInterface, 
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpec' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpec' === \get_class($data);
     }
 
     /**

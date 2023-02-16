@@ -28,7 +28,7 @@ class TaskSpecRestartPolicyNormalizer implements DenormalizerInterface, Normaliz
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecRestartPolicy' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecRestartPolicy' === \get_class($data);
     }
 
     /**

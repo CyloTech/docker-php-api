@@ -28,7 +28,7 @@ class NodeStatusNormalizer implements DenormalizerInterface, NormalizerInterface
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\NodeStatus' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\NodeStatus' === \get_class($data);
     }
 
     /**

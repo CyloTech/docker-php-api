@@ -28,7 +28,7 @@ class VolumeStatusItemNormalizer implements DenormalizerInterface, NormalizerInt
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\VolumeStatusItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\VolumeStatusItem' === \get_class($data);
     }
 
     /**

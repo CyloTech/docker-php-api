@@ -28,7 +28,7 @@ class NodeDescriptionNormalizer implements DenormalizerInterface, NormalizerInte
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\NodeDescription' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\NodeDescription' === \get_class($data);
     }
 
     /**

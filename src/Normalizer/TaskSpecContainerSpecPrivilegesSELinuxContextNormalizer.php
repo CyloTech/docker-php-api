@@ -28,7 +28,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContextNormalizer implements Denorma
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecContainerSpecPrivilegesSELinuxContext' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\TaskSpecContainerSpecPrivilegesSELinuxContext' === \get_class($data);
     }
 
     /**

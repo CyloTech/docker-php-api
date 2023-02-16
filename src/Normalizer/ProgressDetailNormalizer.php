@@ -28,7 +28,7 @@ class ProgressDetailNormalizer implements DenormalizerInterface, NormalizerInter
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ProgressDetail' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ProgressDetail' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class SwarmUnlockkeyGetTextplainResponse200Normalizer implements DenormalizerInt
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SwarmUnlockkeyGetTextplainResponse200' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SwarmUnlockkeyGetTextplainResponse200' === \get_class($data);
     }
 
     /**

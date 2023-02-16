@@ -28,7 +28,7 @@ class ServiceSpecModeReplicatedNormalizer implements DenormalizerInterface, Norm
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ServiceSpecModeReplicated' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ServiceSpecModeReplicated' === \get_class($data);
     }
 
     /**

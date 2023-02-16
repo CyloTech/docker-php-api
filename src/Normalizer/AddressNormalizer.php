@@ -28,7 +28,7 @@ class AddressNormalizer implements DenormalizerInterface, NormalizerInterface, D
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Address' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Address' === \get_class($data);
     }
 
     /**

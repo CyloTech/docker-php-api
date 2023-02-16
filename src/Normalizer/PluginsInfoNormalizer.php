@@ -28,7 +28,7 @@ class PluginsInfoNormalizer implements DenormalizerInterface, NormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\PluginsInfo' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\PluginsInfo' === \get_class($data);
     }
 
     /**

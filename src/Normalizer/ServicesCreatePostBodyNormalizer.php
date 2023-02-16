@@ -28,7 +28,7 @@ class ServicesCreatePostBodyNormalizer implements DenormalizerInterface, Normali
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ServicesCreatePostBody' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ServicesCreatePostBody' === \get_class($data);
     }
 
     /**

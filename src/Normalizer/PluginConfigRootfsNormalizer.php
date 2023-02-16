@@ -28,7 +28,7 @@ class PluginConfigRootfsNormalizer implements DenormalizerInterface, NormalizerI
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\PluginConfigRootfs' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\PluginConfigRootfs' === \get_class($data);
     }
 
     /**

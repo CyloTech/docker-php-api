@@ -28,7 +28,7 @@ class RuntimeNormalizer implements DenormalizerInterface, NormalizerInterface, D
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Runtime' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Runtime' === \get_class($data);
     }
 
     /**

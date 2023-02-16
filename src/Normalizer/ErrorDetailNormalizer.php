@@ -28,7 +28,7 @@ class ErrorDetailNormalizer implements DenormalizerInterface, NormalizerInterfac
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ErrorDetail' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ErrorDetail' === \get_class($data);
     }
 
     /**

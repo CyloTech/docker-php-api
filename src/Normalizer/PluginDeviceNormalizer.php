@@ -28,7 +28,7 @@ class PluginDeviceNormalizer implements DenormalizerInterface, NormalizerInterfa
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\PluginDevice' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\PluginDevice' === \get_class($data);
     }
 
     /**

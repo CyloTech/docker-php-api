@@ -28,7 +28,7 @@ class ResourcesUlimitsItemNormalizer implements DenormalizerInterface, Normalize
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ResourcesUlimitsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ResourcesUlimitsItem' === \get_class($data);
     }
 
     /**

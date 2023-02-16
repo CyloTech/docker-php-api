@@ -28,7 +28,7 @@ class ImageIDNormalizer implements DenormalizerInterface, NormalizerInterface, D
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\ImageID' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\ImageID' === \get_class($data);
     }
 
     /**

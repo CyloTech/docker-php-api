@@ -28,7 +28,7 @@ class RegistryServiceConfigNormalizer implements DenormalizerInterface, Normaliz
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\RegistryServiceConfig' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\RegistryServiceConfig' === \get_class($data);
     }
 
     /**

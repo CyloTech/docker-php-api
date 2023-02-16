@@ -28,7 +28,7 @@ class ServiceNormalizer implements DenormalizerInterface, NormalizerInterface, D
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\Service' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\Service' === \get_class($data);
     }
 
     /**

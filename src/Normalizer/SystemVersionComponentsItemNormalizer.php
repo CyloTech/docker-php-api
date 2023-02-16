@@ -28,7 +28,7 @@ class SystemVersionComponentsItemNormalizer implements DenormalizerInterface, No
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\SystemVersionComponentsItem' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\SystemVersionComponentsItem' === \get_class($data);
     }
 
     /**

@@ -28,7 +28,7 @@ class MountVolumeOptionsNormalizer implements DenormalizerInterface, NormalizerI
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\MountVolumeOptions' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\MountVolumeOptions' === \get_class($data);
     }
 
     /**

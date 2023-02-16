@@ -28,7 +28,7 @@ class GenericResourcesItemDiscreteResourceSpecNormalizer implements Denormalizer
 
     public function supportsNormalization($data, $format = null): bool
     {
-        return \is_object($data) && 'Docker\\API\\Model\\GenericResourcesItemDiscreteResourceSpec' === $data::class;
+        return \is_object($data) && 'Docker\\API\\Model\\GenericResourcesItemDiscreteResourceSpec' === \get_class($data);
     }
 
     /**
