@@ -2580,8 +2580,8 @@ class Client extends \Docker\API\Runtime\Client\Client
             }
             $httpClient = new \Http\Client\Common\PluginClient($httpClient, $plugins);
         }
-        $requestFactory = \Http\Discovery\Psr17FactoryDiscovery::findRequestFactory();
-        $streamFactory = \Http\Discovery\Psr17FactoryDiscovery::findStreamFactory();
+        $requestFactory = new \GuzzleHttp\Psr7\HttpFactory;
+        $streamFactory = new \GuzzleHttp\Psr7\HttpFactory;
         $normalizers = [new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \Docker\API\Normalizer\JaneObjectNormalizer()];
         if (\count($additionalNormalizers) > 0) {
             $normalizers = array_merge($normalizers, $additionalNormalizers);
