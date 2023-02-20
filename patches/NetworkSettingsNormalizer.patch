@@ -6,7 +6,7 @@ index dc48cc5..a3cb884 100644
          if (\array_key_exists('Ports', $data) && $data['Ports'] !== null) {
              $values = new \ArrayObject(array(), \ArrayObject::ARRAY_AS_PROPS);
              foreach ($data['Ports'] as $key => $value) {
-+                if (null === $value) {
++                if ($value === null) {
 +                    $values[$key] = null;
 +                    continue;
 +                }
@@ -17,7 +17,7 @@ index dc48cc5..a3cb884 100644
          if ($object->isInitialized('ports') && null !== $object->getPorts()) {
              $values = array();
              foreach ($object->getPorts() as $key => $value) {
-+                if (null === $value) {
++                if ($value === null) {
 +                    $values[$key] = null;
 +                    continue;
 +                }
